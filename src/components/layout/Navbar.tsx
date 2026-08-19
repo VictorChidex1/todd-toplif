@@ -6,7 +6,8 @@ export function Navbar() {
   return (
     <nav className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto px-4 md:px-8 flex h-24 max-w-screen-2xl items-center justify-between">
-        <Link to="/" className="flex items-center space-x-2">
+        <Link to="/" className="flex items-center space-x-3">
+          <img src="/favicon.jpg" alt="Todd Topliff Logo" className="w-8 h-8 md:w-10 md:h-10 object-contain" />
           <span className="font-heading text-2xl md:text-3xl font-medium tracking-tight text-primary">Todd Topliff</span>
         </Link>
         <div className="hidden md:flex gap-8 items-center">
