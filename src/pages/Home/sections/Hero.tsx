@@ -5,13 +5,13 @@ import { motion } from "framer-motion";
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden bg-background pt-24 pb-32 md:pt-32 md:pb-40">
+    <section className="relative overflow-hidden bg-background pt-10 pb-20 md:pt-16 md:pb-32">
       {/* Subtle background texture/gradient */}
       <div className="absolute inset-0 z-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-muted/50 via-background to-background" />
 
       <div className="container relative z-10 mx-auto px-4 md:px-8 max-w-screen-2xl flex flex-col md:flex-row items-center gap-12 md:gap-24">
         {/* Left Content */}
-        <div className="flex-1 w-full max-w-2xl text-center md:text-left pt-12 md:pt-0">
+        <div className="flex-1 w-full max-w-2xl text-center md:text-left">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
