@@ -3,6 +3,7 @@ import { RootLayout } from "@/components/layout/RootLayout"
 import Home from "@/pages/Home"
 import About from "@/pages/About"
 import Services from "@/pages/Services"
+import Opportunities from "@/pages/Opportunities"
 
 function App() {
   return (
@@ -12,7 +13,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
-          <Route path="/opportunities" element={<div className="container py-24 text-center font-heading text-3xl">Opportunities Page (Coming Soon)</div>} />
+          <Route path="/opportunities" element={<Opportunities />} />
           <Route path="/contact" element={<div className="container py-24 text-center font-heading text-3xl">Contact Page (Coming Soon)</div>} />
         </Route>
       </Routes>
