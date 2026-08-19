@@ -9,6 +9,10 @@ export default {
   ],
   theme: {
   	extend: {
+  		fontFamily: {
+  			sans: ['Inter', 'system-ui', 'sans-serif'],
+  			heading: ['Playfair Display', 'serif'],
+  		},
   		colors: {
   			background: 'var(--background)',
   			foreground: 'var(--foreground)',
