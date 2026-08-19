@@ -5,6 +5,7 @@ import About from "@/pages/About"
 import Services from "@/pages/Services"
 import Opportunities from "@/pages/Opportunities"
 import Contact from "@/pages/Contact"
+import Privacy from "@/pages/Privacy"
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/services" element={<Services />} />
           <Route path="/opportunities" element={<Opportunities />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/privacy" element={<Privacy />} />
         </Route>
       </Routes>
     </BrowserRouter>
