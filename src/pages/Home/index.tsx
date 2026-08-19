@@ -5,6 +5,7 @@ import { Differentiator } from "./sections/Differentiator"
 import { ProcessTimeline } from "./sections/ProcessTimeline"
 import { LocalExpertise } from "./sections/LocalExpertise"
 import { PersonalStory } from "./sections/PersonalStory"
+import { KeyConsiderations } from "./sections/KeyConsiderations"
 import { FinalCTA } from "./sections/FinalCTA"
 
 export default function Home() {
@@ -17,6 +18,7 @@ export default function Home() {
       <ProcessTimeline />
       <LocalExpertise />
       <PersonalStory />
+      <KeyConsiderations />
       <FinalCTA />
     </div>
   )
