@@ -51,13 +51,13 @@ export function TrustStrip() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, margin: "-100px" }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-y-12 gap-x-8 md:gap-8 divide-x-0 md:divide-x divide-primary-foreground/10"
+          className="grid grid-cols-1 md:grid-cols-4 divide-y md:divide-y-0 md:divide-x divide-primary-foreground/10"
         >
           {stats.map((stat, index) => (
             <motion.div 
               key={index}
               variants={item}
-              className="flex flex-col items-center justify-center text-center px-4 relative group"
+              className="flex flex-col items-center justify-center text-center px-4 py-10 md:py-0 relative group"
             >
               {/* Subtle hover glow effect */}
               <div className="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 blur-xl transition-opacity duration-700 rounded-full scale-150" />
