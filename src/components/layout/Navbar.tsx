@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { Link } from "react-router-dom"
+import { Link, NavLink } from "react-router-dom"
 import { buttonVariants } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 import { Menu, X } from "lucide-react"
@@ -7,6 +7,12 @@ import { motion, AnimatePresence } from "framer-motion"
 
 export function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+
+  const navLinkClass = ({ isActive }: { isActive: boolean }) => 
+    cn("text-sm font-medium transition-colors hover:text-primary", !isActive && "text-muted-foreground")
+
+  const mobileNavLinkClass = ({ isActive }: { isActive: boolean }) => 
+    cn("text-lg font-medium transition-colors hover:text-primary", !isActive && "text-muted-foreground")
 
   return (
     <nav className="sticky top-0 z-50 w-full border-b bg-background shadow-sm">
@@ -18,10 +24,10 @@ export function Navbar() {
         
         {/* Desktop Menu */}
         <div className="hidden md:flex gap-8 items-center">
-          <Link to="/" className="text-sm font-medium transition-colors hover:text-primary">Home</Link>
-          <Link to="/about" className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary">About</Link>
-          <Link to="/services" className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary">Services</Link>
-          <Link to="/opportunities" className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary">Opportunities</Link>
+          <NavLink to="/" className={navLinkClass}>Home</NavLink>
+          <NavLink to="/about" className={navLinkClass}>About</NavLink>
+          <NavLink to="/services" className={navLinkClass}>Services</NavLink>
+          <NavLink to="/opportunities" className={navLinkClass}>Opportunities</NavLink>
           <Link to="/contact" className={cn(buttonVariants({ size: "lg" }), "ml-4 font-sans tracking-wide rounded-none px-8")}>
             Start a Conversation
           </Link>
@@ -47,10 +53,10 @@ export function Navbar() {
             transition={{ duration: 0.2 }}
             className="md:hidden border-t border-border/50 bg-background absolute top-24 left-0 w-full shadow-2xl flex flex-col px-6 py-8 gap-6 z-40"
           >
-            <Link to="/" onClick={() => setIsMobileMenuOpen(false)} className="text-lg font-medium transition-colors hover:text-primary">Home</Link>
-            <Link to="/about" onClick={() => setIsMobileMenuOpen(false)} className="text-lg font-medium text-muted-foreground transition-colors hover:text-primary">About</Link>
-            <Link to="/services" onClick={() => setIsMobileMenuOpen(false)} className="text-lg font-medium text-muted-foreground transition-colors hover:text-primary">Services</Link>
-            <Link to="/opportunities" onClick={() => setIsMobileMenuOpen(false)} className="text-lg font-medium text-muted-foreground transition-colors hover:text-primary">Opportunities</Link>
+            <NavLink to="/" onClick={() => setIsMobileMenuOpen(false)} className={mobileNavLinkClass}>Home</NavLink>
+            <NavLink to="/about" onClick={() => setIsMobileMenuOpen(false)} className={mobileNavLinkClass}>About</NavLink>
+            <NavLink to="/services" onClick={() => setIsMobileMenuOpen(false)} className={mobileNavLinkClass}>Services</NavLink>
+            <NavLink to="/opportunities" onClick={() => setIsMobileMenuOpen(false)} className={mobileNavLinkClass}>Opportunities</NavLink>
             <Link to="/contact" onClick={() => setIsMobileMenuOpen(false)} className={cn(buttonVariants({ size: "lg" }), "w-full font-sans tracking-wide rounded-none mt-4 py-6 text-base")}>
               Start a Conversation
             </Link>
